@@ -12,8 +12,8 @@ app.use(express.json());
 const transporter = nodemailer.createTransport({
     service: 'gmail', // Usar Gmail como servicio
     auth: {
-        user: 'leveluprepairsesp@gmail.com', 
-        pass: 'cqbx cyfy gjis ymoa', 
+        user: process.env.GMAIL_USER, // Usa la variable de entorno
+        pass: process.env.GMAIL_PASS, // Usa la variable de entorno 
     },
 });
 
